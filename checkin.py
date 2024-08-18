@@ -52,7 +52,8 @@ if __name__ == '__main__':
             if status == "Checkin! Get 1 Day":
                 success += 1
                 message_status = "签到成功，会员天数 + 1"
-            elif status == "Please Try Tomorrow":
+            # elif status == "Please Try Tomorrow" or status == "Checkin Repeats! Please Try Tomorrow":
+            elif "Please Try Tomorrow" in status:
                 message_status = "今日已签到"
             else:
                 fail += 1
