@@ -49,6 +49,7 @@ if __name__ == '__main__':
             # 获取账号email
             email = result['data']['email']
 
+            print(status)
             if status == "Checkin! Get 1 Day":
                 success += 1
                 message_status = "签到成功，会员天数 + 1"
