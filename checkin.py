@@ -49,7 +49,6 @@ if __name__ == '__main__':
             # 获取账号email
             email = result['data']['email']
 
-            print(status)
             if status == "Checkin! Get 1 Day":
                 success += 1
                 message_status = "签到成功，会员天数 + 1"
@@ -72,7 +71,8 @@ if __name__ == '__main__':
         sendContent += f"{'-'*30}\n\
             账号: {email}\n\
             签到情况: {message_status}\n\
-            剩余天数: {message_days}\n"
+            剩余天数: {message_days}\n\
+            状态码: {status}\n"
         
         if cookie == cookies[-1]:
             sendContent += '-' * 30
